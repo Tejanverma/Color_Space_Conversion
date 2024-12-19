@@ -1,0 +1,48 @@
+# .NET Core
+bin/
+obj/
+
+# User-specific files
+.vs/
+.idea/
+*.user
+*.suo
+
+# ASP.NET Core
+wwwroot/dist/
+wwwroot/lib/
+wwwroot/css/
+wwwroot/js/
+
+# User secrets (you can use environment variables or Azure Key Vault)
+appsettings.json
+
+# Logs
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Temporary files
+*.bak
+*.tmp
+
+# JetBrains Rider
+.idea/
+
+# npm (Node.js dependencies if using for front-end)
+node_modules/
+
+# Visual Studio for Mac
+.vscode/
+
+# Microsoft ASP.NET Core Environment variable files (local development secrets)
+appsettings.Development.json
+
+# Publish and Deployment Files
+publish/

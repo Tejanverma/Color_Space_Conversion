@@ -1,0 +1,35 @@
+﻿@model ColorSpaceConversionModel;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="container">
+
+    <form asp-controller="ColorSpaceConversion" asp-action="Index" method="post" enctype="multipart/form-data">
+        <label asp-for="Image">Upload Image To Convert it into Different Color Space</label><br />
+        <input type="file" asp-for="Image" /><br />
+        <label asp-for="ColorType">Select Color</label><br />
+        <select asp-for="ColorType" class="form-control"
+        asp-items="Html.GetEnumSelectList<ColorType>()">
+            <option value="" selected>Select ColorType</option>           
+        </select><br />
+        <input type="submit" />
+    </form>
+
+</div>
+@{
+   
+    if(ViewBag.ErrorMessage != null){
+        <h5 style="color:red">@ViewBag.ErrorMessage</h5>
+    }
+    if(ViewBag.result != null){
+        <h3>@ViewBag.result</h3>
+    }
+    if(ViewBag.OriginalImage != null && ViewBag.ProcessedImage != null){
+        <h3>Original Image:</h3>
+        <img src=@ViewBag.OriginalImage alt="Original Image" class="img-fluid" />
+        <h3>Converted Image:</h3>
+        <img src=@ViewBag.ProcessedImage alt="Processed Image" class="img-fluid" />
+    }
+}
